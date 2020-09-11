@@ -1,0 +1,125 @@
+html,
+body {
+  margin: 0;
+  height:100%;
+  width:100%;
+  background-color: #272635;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  justify-content:center;
+  Align-items:center;
+  display:flex;
+}
+.cacher .wrapper{
+  display:none;
+}
+
+.formulaire {
+  width: 280px;
+  padding:20px;
+  background: #F0BCD4;
+  border-radius:20px;
+}
+.nom{
+  height:40px;
+  width:100%;
+  border-radius:20px;
+  opacity:50%;
+  border:none;
+}
+
+.peau{
+  justify-content:space-between;
+  display:flex;
+  
+}
+select{
+  appearance: none;
+  height:40px;
+  width:100%;
+  border-radius:20px;
+  background:rgba(255,255,255,0.5);
+  border:none;
+  padding-left:10px;
+}
+
+.jouer{
+  height:40px;
+  width:100%;
+  border-radius:20px;
+  border:none;
+}
+
+/* Affichage des résultats */
+
+.resultat{
+  display:none;
+  width:100%;
+}
+.show .resultat{
+  display:flex;
+}
+.joueurGauche{
+  width:25%;
+  height:100vmin;
+  background-color:orange;
+  text-align:center;
+  transform:translateX(100%);
+}
+#joueur{
+  color:white;
+  font-size:30px;
+}
+.choixJoueur{
+  width:50%;
+  height:200px;
+  transform:translateX(50%) translateY(100%);
+}
+#mainJoueur{
+  font-size:100px;
+}
+.joueurDroite{
+  width:25%;
+  height:100vmin;
+  background-color:pink;
+  text-align:center;
+  transform:translateX(100%);
+}
+.choixOpposant{
+  width:50%;
+  height:200px;
+  transform:translateX(50%) translateY(100%);
+}
+#opposant{
+  color:white;
+  font-size:30px;
+}
+#mainOpposant{
+  font-size:100px;
+}
+.bas{
+  display:flex;
+  justify-content:center;
+  position:relative;
+}
+#annonce{
+  position:absolute;
+  font-size:60px;
+  color:white;
+  z-index:1;
+  bottom:10%;
+}
+.rejouer{
+  height:40px;
+  width:200px;
+  border-radius:20px;
+  border:none;
+  background-color:white;
+  color:black;
+  position:absolute;
+  z-index:1;
+  bottom:0;
+}

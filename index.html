@@ -1,0 +1,55 @@
+<body>
+    <div class="wrapper" id="wrapperId">
+      <form class="formulaire" name="formulaire">
+        <label>Nom</label><br>
+        <input type="text" class="nom" id="nom">
+        <label>Peau</label><br/>
+        <div class="peau">
+        <label class="couleur"><input type="radio" name="peau" id="jaune" value= 0>👋</label>
+        <label><input type="radio" name="peau" id="pale" value= 1>👋🏻</label>
+        <label><input type="radio" name="peau" id="bronze" value= 2>👋🏽</label>
+          <label><input type="radio" name="peau" id="noir" value= 3>👋🏿</label></div><br>
+        <label for="choix">Choix</label>
+    <select name="choix" class="choix" id="choix">
+      <option value= 1 >🥔</option>
+      <option value= 2 > 📄</option>
+      <option value= 3 >✂️</option>
+    </select><br/><br/>
+       <button type="button" class="jouer" onClick="displayImg()" value="Display Random Image">Jouer</button>
+      </form>
+    </div>
+   
+     <!-- Affiche des résulats -->
+    
+    <div class="resultat">
+      
+       
+       <div class="joueurGauche">
+        <span id="joueur"></span>
+         <div class="choixJoueur">
+           <div id="mainJoueur">
+             <span></span>
+         </div>
+         </div>
+       </div>
+    
+       <div class="joueurDroite">
+        <span id="opposant">CPU</span>
+         <div class="choixOpposant" name="canvas">
+           <div id="mainOpposant">
+             <span></span>
+         </div>
+         </div>
+       </div>
+       
+       <div class="bas">
+         <span id="annonce" class="annonce">[RÉSULTAT]</span>
+         <button type="button" class="rejouer">Rejouer</button>
+        </div>
+       
+       
+     
+    </div>
+    
+    
+  </body>
