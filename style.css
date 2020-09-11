@@ -92,6 +92,7 @@ select{
   width:50%;
   height:200px;
   transform:translateX(50%) translateY(100%);
+  font-size:100px;
 }
 #opposant{
   color:white;
