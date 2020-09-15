@@ -10,12 +10,19 @@ jouer.addEventListener('click', function() {
   document.getElementById("joueur").innerHTML = nom;
   
   //Partie pour cacher le premier formulaire
-  document.body.classList.add('cacher');
+  //document.body.classList.add('cacher');
   document.body.classList.add('show');
+
   
   //Animation GSAP..........................................................
   
-  
+  const tl = gsap.timeline({
+    default: {
+      ease: "linear"
+    }
+  })
+  .to(".wrapper", {ease:"back.in(1)", y:"100vh", duration: 1, opacity: 0})
+  .to(".resultat", {ease:"back.out(1)", y:"-100vh", duration: 1, opacity: 1})
 });
 
 //Rejouer.........................................................................
@@ -24,7 +31,19 @@ const rejouer = document.querySelector('.rejouer');
 rejouer.addEventListener('click', function() {
   document.body.classList.remove('show');
   document.body.classList.remove('cacher');
+
+  //Animation GSAP.....................................................................
   
+const tl = gsap.timeline({
+    default: {
+      ease: "linear"
+    }
+  })
+  
+  .to(".wrapper", {ease:"back.out(1)", y:"0vh", duration: 1, opacity: 1})
+  .to(".resultat", {ease:"back.in(1)", y:"-100vh", duration: 2, opacity: 0})
+  
+
 });
 
 
@@ -102,6 +121,7 @@ class Game{
         annonce.innerHTML = "<span>VICTOIRE!</span>";
     }
   }
+  
   
 }
 
